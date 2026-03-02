@@ -10,22 +10,40 @@
         background-image:url(https://assets.milestoneinternet.com/cdn-cgi/image/f=auto/c-m-marketing-solutions-llc-parent/roberts-hawaii/siteimages/transportation/school-bus-charter/school-bus-charter-service-by-roberts-hawaii-honolulu-hi-usa.jpg?width=1440&height=830);
         background-repeat:no-repeat;
         background-size:cover;
-        background-color: rgba(11, 9, 170, 0.5);
+        background-color: rgba(41, 39, 165, 0.9);
         background-blend-mode: overlay;
     }
     .navbar-brand img {
     height: 70px;
     width: auto;
+    }
+    .image-container2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;                
+    margin-top: 50px;       
 }
+    .container2 {      
+    padding: 10px;
+    border-radius: 20px;
+    width:875px;
+    height:auto;
+    justify-content:center;
+    border: 1px solid #0b9fbc;
+    background-color:rgba(187, 140, 39, 0.6);
+    }
 </style>
 </head>
 <body>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-5 border-primary" style="border-color:#0bf345 !important;">
+<nav class="navbar navbar-expand-lg navbar-light border-bottom border-5 border-primary" style="background-color:hwb(64 68% 0%); border-color:#0bf345 !important;">
     <div class="container-fluid">
 
-        <a class="navbar-brand col-sm-3" href="index.html">
+        <a class="navbar-brand" href="index.html">
             <img src="School_Bus_PH_Logo.webp">
+        </a>
+        <a class="navbar-brand" href="index.html">
+            <img src="School_Bus_PH_Text.webp" style="height:50px; width:auto;">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -43,26 +61,93 @@
           <a class="nav-link" href="Fare_Matrix.html">Fare Matrix</a>
         </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="student_life.html">Student Life</a>
+                    <a class="nav-link" href="schedule.html">Schedule</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="enroll_now.html">Enroll Now</a>
-                </li>
+             
 
-                <li class="nav-item">
-                    <a class="nav-link" href="contact_us.html">Contact Us</a>
-                </li>
-            </ul>
-
-            <div class="d-flex">
-                <button class="btn rounded-5 text-light px-4 py-3" style="background-color:#0b964c;">
+            <div class="d-flex ms-auto">
+                <button class="btn rounded-5 text-light px-4 py-3" style="background-color: #0b964c;">
                     Create Account
                 </button>
             </div>
         </div>
     </div>
 </nav>
+<br>
+
+<div class="image-container2">
+<div class="container2 text-center">
+    <img src="School_Bus_PH_Logo.webp" style="height:225px; width:auto;"><br><br>
+    <h1 class="text-center" style="color:#F3C74B;"><strong>Welcome to School Bus PH!</strong></h1><br>
+        <h3 class="text-center">We are happy and proud to serve every student's transportation to almost any school in the Philippines!</h3>
+        <br><details ontoggle="message1()">
+        <summary>
+            <u><h3>instructions</h3></u>
+            <br>
+            <i id="message"></i>
+        </summary>
+    </details>
+    </div>
+</div>
+
+<script>
+    function message1(){
+            document.getElementById('message').innerHTML = "<span style='font-size: 28px;'>In this website, you can be able to meet many school bus drivers who can serve high quality service unlike most school buses. Just click the create account button on top right to register in!</span>";   }         
+</script>
+
+<br>
+<footer class="text-light mt-5 p-4" style="background-color: #65bc09;">
+    <div class="container">
+    <div class="row">
+          <div class="col-sm-4">
+              <a href="#mynavbar" class="">
+                <img src="School_Bus_PH_Logo.webp" alt="OBMC Logo" class="rounded-circle bg-light p-2" style="height:150px; width: auto;">
+              </a>
+          </div>
+
+          <div class="col-sm-4">
+              <h5>Contact</h5>
+              <ul class="list-unstyled">
+                  <li>info@obmontessori.edu.ph</li>
+                  <li>+63 2 8722 9720 to 26</li>
+                  <li><a href="about_developers.html" class="text-white">About Developers</a></li>
+                  <li>
+                    <a href="https://www.facebook.com/obmcofficial/"><img src="facebook-icon.png" alt="" class="" style="width: 9%; height: auto;">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCqfx_-uvSz9wJvyQj6KvGFQ"><img src="youtube-icon.png" alt="" class="" style="width: 11%; height: auto;">
+                    </a>
+                    <a href="https://www.instagram.com/obmontessoriofficial?igsh=MXM5YWI5bzAzcHE3aw=="><img src="insta-icon.png" alt="" class="" style="width: 10%; height: auto;">
+                    </a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="col-sm-4">
+              <h5>Campuses Location</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Angeles City, Pampanga</a></li>
+                <li><a href="#" class="text-white">Fairview, Quezon City</a></li>
+                <li><a href="#" class="text-white">Greenhills, San Juan City</a></li>
+                <li><a href="#" class="text-white">B.F. Homes, Las Piñas City</a></li>
+                <li><a href="#" class="text-white">Sta. Ana, Manila City</a></li>
+              </ul>
+          </div>
+    </div>
+
+        <div class="col-sm-4">
+             <h5><strong>Sources:</strong></h5>
+             <a href="(input link here)" target="_blank" class="text-info"><strong class="text-primary">Name of the Website Here</strong></a>
+
+    </div>
+
+        <hr class="bg-light">
+        <div class="text-center">
+            <p>&copy;Group 11 | 9-Sapphire &copy; 2026</p>
+        </div>
+    </div>
+</footer>
+
 
 
 </body>
