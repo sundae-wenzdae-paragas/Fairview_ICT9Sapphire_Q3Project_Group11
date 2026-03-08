@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fare_Martix.html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>  
+    body{
+        background-image:url(https://media.istockphoto.com/id/530766151/photo/school-bus.jpg?s=612x612&w=0&k=20&c=Eg5Z94_c3U27rM_WE0WUK_seqZRTonzFTmW75VgG2es=);
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-color: rgba(20, 18, 100, 0.9);
+        background-blend-mode: overlay;
+    }
+    .navbar-brand img {
+    height: 70px;
+    width: auto;
+    }
+    .image-container2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;                
+    margin-top: 50px;       
+}
+    .container2 {      
+    padding: 10px;
+    border-radius: 20px;
+    width:875px;
+    height:auto;
+    justify-content:center;
+    border: 1px solid #0b9fbc;
+    background-color:rgba(62, 2, 69, 0.6);
+    }
+
+    .container{
+    padding: 10px;
+    border-radius: 20px;
+    width:500px;
+    height:auto;
+    border:1px solid #0b9fbc;
+    background-color:rgba(62, 2, 69, 0.6);
+    }
+
+    .container-fluid2{
+        padding: 10px;
+        border-radius:20px;
+        display: flex;
+        justify-content:center;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom border-5 border-primary" style="background-color:hwb(64 68% 0%); border-color:#0bf345 !important;">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="School_Bus_PH_Logo.webp">
+        </a>
+        <a class="navbar-brand" href="index.html">
+            <img src="School_Bus_PH_Text.webp" style="height:50px; width:auto;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <div class="collapse navbar-collapse" id="mynavbar">
+    
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Fare_Matrix.html"><strong>Fare Matrix</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="schedule.html"><strong>Schedule</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Help.html"><strong>Help</strong></a>
+        </li>
+    </ul>
+
+    <div class="d-flex ms-auto">
+        <button class="btn rounded-5 text-light px-4 py-3" style="background-color: #0b964c;">
+            Create Account
+        </button>
+    </div>
+        </div>
+    </div>
+</nav>
+<br>
+
+<div class="image-container2">
+<div class="container2 text-center">
+    <br>
+    <h1 class="text-center" style="color:#16ffff;"><strong>Fare Matrix</strong></h1>
+        <details ontoggle="message1()">
+        <summary>
+            <u><h3 class="text-light">instructions</h3></u>
+            <br>
+            <i id="message"></i>
+        </summary>
+    </details>
+    </div>
+</div>
+
+<script>
+    function message1(){
+            document.getElementById('message').innerHTML = "<span style='font-size: 28px;' class='text-light'>In this page, pick your pick up location and drop off location and we can calculate the cost for your travel with a 10% discount!</span>";   }  
+            
+</script>
+
+<br>
+
+
+<main class="container-fluid2">
+                    
+    <div class="container">
+        <img src="mrt_map.webp" alt="MRT Map" class="img-fluid rounded">
+    </div>
+
+    <div class="container">
+        <div class="p-3 text-white">
+
+            <div class="mb-4">
+                <label class="form-label fw-bold">PICK-UP LOCATION:</label>
+                <select id="pickup" class="form-select form-select-lg" onchange="calculateFare()">
+                    <option value="North Avenue">North Avenue</option>
+                    <option value="Quezon Avenue">Quezon Avenue</option>
+                    <option value="Kamuning">Kamuning</option>
+                    <option value="Araneta Center-Cubao">Araneta Center-Cubao</option>
+                    <option value="Santolan Annapolis">Santolan Annapolis</option>
+                    <option value="Ortigas">Ortigas</option>
+                    <option value="Shaw Boulevard">Shaw Boulevard</option>
+                    <option value="Boni">Boni</option>
+                    <option value="Guadalupe">Guadalupe</option>
+                    <option value="Buendia">Buendia</option>
+                    <option value="Ayala">Ayala</option>
+                    <option value="Magallanes">Magallanes</option>
+                    <option value="Taft Avenue">Taft Avenue</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold">DROP-OFF LOCATION:</label>
+                <select id="dropoff" class="form-select form-select-lg" onchange="calculateFare()">
+                    <option value="North Avenue">North Avenue</option>
+                    <option value="Quezon Avenue">Quezon Avenue</option>
+                    <option value="Kamuning">Kamuning</option>
+                    <option value="Araneta Center-Cubao">Araneta Center-Cubao</option>
+                    <option value="Santolan Annapolis">Santolan Annapolis</option>
+                    <option value="Ortigas">Ortigas</option>
+                    <option value="Shaw Boulevard">Shaw Boulevard</option>
+                    <option value="Boni">Boni</option>
+                    <option value="Guadalupe">Guadalupe</option>
+                    <option value="Buendia">Buendia</option>
+                    <option value="Ayala">Ayala</option>
+                    <option value="Magallanes">Magallanes</option>
+                    <option value="Taft Avenue">Taft Avenue</option>
+                </select>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-center">
+                <button onclick="setDiscount(false)" class="btn btn-warning px-4">Regular Fare</button>
+                <button onclick="setDiscount(true)" class="btn btn-dark border px-4">Discounted Fare</button>
+                <input type="checkbox" id="disc" class="d-none">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-white text-center rounded-3 p-4 shadow h-100">
+            <h1 class="fw-light fw-bold display-5">Fare:</h1>
+            <div id="DisplayAns" class="display-1 fw-bold mt-3">0.00</div>
+        </div>
+    </div>
+
+</main>
+
+<script>
+
+function setDiscount(value){
+    document.getElementById("disc").checked = value;
+    calculateFare();
+}
+
+function calculateFare() {
+
+    const stationIndex = {
+        "North Avenue": 0,
+        "Quezon Avenue": 1,
+        "Kamuning": 2,
+        "Araneta Center-Cubao": 3,
+        "Santolan Annapolis": 4,
+        "Ortigas": 5,
+        "Shaw Boulevard": 6,
+        "Boni": 7,
+        "Guadalupe": 8,
+        "Buendia": 9,
+        "Ayala": 10,
+        "Magallanes": 11,
+        "Taft Avenue": 12
+    };
+
+    const matrix = [
+        [0,13,13,16,16,20,20,20,24,24,24,28,28],
+        [13,0,13,13,16,16,20,20,20,24,24,24,28],
+        [13,13,0,13,13,16,16,20,20,20,24,24,24],
+        [16,13,13,0,13,13,16,16,20,20,20,24,24],
+        [16,16,13,13,0,13,13,16,16,20,20,20,24],
+        [20,16,16,13,13,0,13,13,16,16,20,20,20],
+        [20,20,16,16,13,13,0,13,13,16,16,20,20],
+        [20,20,20,16,16,13,13,0,13,13,16,16,20],
+        [24,20,20,20,16,16,13,13,0,13,13,16,16],
+        [24,24,20,20,20,16,16,13,13,0,13,13,16],
+        [24,24,24,20,20,20,16,16,13,13,0,13,13],
+        [28,24,24,24,20,20,20,16,16,13,13,0,13],
+        [28,28,24,24,24,20,20,20,16,16,13,13,0]
+    ];
+
+    const start = document.getElementById("pickup").value;
+    const end = document.getElementById("dropoff").value;
+    const isDiscounted = document.getElementById("disc").checked;
+
+    const startIndex = stationIndex[start];
+    const endIndex = stationIndex[end];
+
+    let fare = matrix[startIndex][endIndex];
+
+    fare = fare * (1 - (0.20 * isDiscounted));
+
+    document.getElementById("DisplayAns").innerHTML = "₱ " + fare.toFixed(2);
+}
+
+</script>
+
+
+<footer class="text-light mt-5 p-4" style="background-color: #65bc09;">
+    <div class="container4">
+    <div class="row">
+          <div class="col-sm-4">
+              <a href="#mynavbar" class="">
+                <img src="School_Bus_PH_Logo.webp" alt="OBMC Logo" class="rounded-circle bg-light p-2" style="height:150px; width: auto;">
+              </a>
+          </div>
+
+          <div class="col-sm-4">
+              <h5>Contact</h5>
+              <ul class="list-unstyled">
+                  <li>info@obmontessori.edu.ph</li>
+                  <li>+63 2 8722 9720 to 26</li>
+                  <li><a href="about_developers.html" class="text-white">About Developers</a></li>
+                  <li>
+                    <a href="https://www.facebook.com/obmcofficial/"><img src="facebook-icon.png" alt="" class="" style="width: 9%; height: auto;">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCqfx_-uvSz9wJvyQj6KvGFQ"><img src="youtube-icon.png" alt="" class="" style="width: 11%; height: auto;">
+                    </a>
+                    <a href="https://www.instagram.com/obmontessoriofficial?igsh=MXM5YWI5bzAzcHE3aw=="><img src="insta-icon.png" alt="" class="" style="width: 10%; height: auto;">
+                    </a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="col-sm-4">
+              <h5>Campuses Location</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Angeles City, Pampanga</a></li>
+                <li><a href="#" class="text-white">Fairview, Quezon City</a></li>
+                <li><a href="#" class="text-white">Greenhills, San Juan City</a></li>
+                <li><a href="#" class="text-white">B.F. Homes, Las Piñas City</a></li>
+                <li><a href="#" class="text-white">Sta. Ana, Manila City</a></li>
+              </ul>
+          </div>
+    </div>
+
+        <div class="col-sm-4">
+             <h5><strong>Sources:</strong></h5>
+             <a href="(input link here)" target="_blank" class="text-info"><strong class="text-primary">Name of the Website Here</strong></a>
+
+    </div>
+
+        <hr class="bg-light">
+        <div class="text-center">
+            <p>&copy;Group 11 | 9-Sapphire &copy; 2026</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
